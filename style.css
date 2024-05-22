@@ -52,7 +52,7 @@ a {
 .profile {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2vw;
 }
 
 .profile img {
@@ -95,7 +95,7 @@ a {
 
 /* Section title and about text styles */
 .section-title {
-    font-size: 3rem;
+    font-size: 3vw;
 }
 
 .title-container {
@@ -112,13 +112,13 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2vw;
     width: 100%;
     height: 80vh;
 }
 
 .about-text {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     border-radius: 20px;
     padding: 10px;
     background-color: rgb(var(--classic));
@@ -169,7 +169,16 @@ a {
     transform: scale(1.05);
 }
 
+.img_container_projects{
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
 .img_projects {
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Button styles */

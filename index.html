@@ -10,14 +10,18 @@
     
     <header>
         <nav class="navbar">
-            <ul>
-                <li><a href="#about">A propos</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="container-navbar">
+                <div class="logo">
+                    <a href="index.html" class="logo">Mallet Piel</a>
+                </div>
+                <div class="items-navbar-container">
+                    <a href="#about">A propos</a>
+                    <a href="#projects">Projets</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
         </nav>
-    </header>
+    </header>    
     <main>
         <section id="about" class="about-section">
             <div class="title-container">
@@ -26,7 +30,7 @@
             <div class="about-wrapper">
                 <div class="profile">
                     <img src="./img/photo_iut.jpeg" width="800" height="1040" alt="Photo de profil">
-                    <a href="./pdf/CV_PIEL_MALLET.pdf" class="cv_download button" download="CV_MALLET_Piel.pdf" target="_blank">
+                    <a href="./pdf/CV_PIEL_MALLET.pdf" class="cv-download button" download="CV_MALLET_Piel.pdf" target="_blank">
                         <span >Mon CV</span>
                         <img src="./img/download.svg" alt="DL">
                     </a>
@@ -37,34 +41,74 @@
                     <p>Actuellement, je suis à la recherche d'une alternance pour l'année prochaine (septembre 2024), afin de progresser et de découvrir le milieu professionnel vers lequel je m'oriente.</p>
                 </section>
             </div>
+            <div class="about-wrapper-form">
+                <section class="about-text">
+                    <h2><u>Formation</u> :</h2>
+                    <br>
+                    <p>J'ai suivi un parcours général au lycée Jean Macé à Lanester, où j'ai choisi la spécialité Numérique et Sciences Informatiques (NSI) ainsi que la spécialité Mathématiques.</p>
+                </section>
+            </div>
         </section>
         <section id="projects" class="projects-section">
             <div class="title-container">
                 <h1 class="section-title">Projets</h1>
             </div>
-            <div class="container_cards">
-                <a href="#Tabaskho" title="Tabas'kho" class="cards">
-                    <div class="project_card">
-                        <div class="img_container_projects">
-                            <img src="./img/tabaskho/thabasko1.png" alt="Tabas'kho main images" class="img_projects">
+            <div class="container-cards">
+
+                <a href="#tabaskho" title="Tabas'kho" class="cards">
+                    <div class="project-card">
+                        <div class="img-container-projects">
+                            <img src="./img/projects/tabaskho/thabasko1.png" alt="Tabas'kho main images" class="img-projects">
                         </div> 
                         <h2>Tabas'kho</h2>
                         <p>Site web vitrine d'un site de streaming</p>
                     </div>
                 </a>
-                <a href="#Tabaskho" title="Tabas'kho" class="cards">
-                    <div class="project_card">
-                        <div class="img_container_projects">
-                            <img src="./img/tabaskho/fgdgdfg.png" alt="Tabas'kho main images" class="img_projects">
+
+                <a href="#sudoku" title="Tabas'kho" class="cards">
+                    <div class="project-card">
+                        <div class="img-container-projects">
+                            <img src="./img/projects/tabaskho/thabasko1.png" alt="Tabas'kho main images" class="img-projects">
                         </div> 
                         <h2>Tabas'kho</h2>
                         <p>Site web vitrine d'un site de streaming</p>
                     </div>
                 </a>
-                <a href="#Tabaskho" title="Tabas'kho" class="cards">
-                    <div class="project_card">
-                        <div class="img_container_projects">
-                            <img src="./img/tabaskho/thabasko1.png" alt="Tabas'kho main images" class="img_projects">
+
+                <a href="#tabaskho" title="Tabas'kho" class="cards">
+                    <div class="project-card">
+                        <div class="img-container-projects">
+                            <img src="./img/projects/tabaskho/thabasko1.png" alt="Tabas'kho main images" class="img-projects">
+                        </div> 
+                        <h2>Tabas'kho</h2>
+                        <p>Site web vitrine d'un site de streaming</p>
+                    </div>
+                </a>
+
+                <a href="#tabaskho" title="Tabas'kho" class="cards">
+                    <div class="project-card">
+                        <div class="img-container-projects">
+                            <img src="./img/projects/tabaskho/thabasko1.png" alt="Tabas'kho main images" class="img-projects">
+                        </div> 
+                        <h2>Tabas'kho</h2>
+                        <p>Site web vitrine d'un site de streaming</p>
+                    </div>
+                </a>
+
+                <a href="#tabaskho" title="Tabas'kho" class="cards">
+                    <div class="project-card">
+                        <div class="img-container-projects">
+                            <img src="./img/projects/tabaskho/thabasko1.png" alt="Tabas'kho main images" class="img-projects">
+                        </div> 
+                        <h2>Tabas'kho</h2>
+                        <p>Site web vitrine d'un site de streaming</p>
+                    </div>
+                </a>
+
+                <a href="#tabaskho" title="Tabas'kho" class="cards">
+                    <div class="project-card">
+                        <div class="img-container-projects">
+                            <img src="./img/projects/tabaskho/thabasko1.png" alt="Tabas'kho main images" class="img-projects">
                         </div> 
                         <h2>Tabas'kho</h2>
                         <p>Site web vitrine d'un site de streaming</p>
@@ -72,6 +116,35 @@
                 </a>
             </div>
         </section>
+
+        <div class="container-sep-cards-project">
+            <hr class="sep-cards-project">
+        </div>
+
+        <section id="tabaskho" class="tabaskho-section project">
+            <div class="title-container">
+                <h1 class="project-title">Tabas'kho</h1>
+            </div>
+            <div class="project-container">
+                <img src="./img/projects/tabaskho/thabasko1.png" alt="Thabskho main">
+                <p>Tabaskho est un site Vitrine pour un site de streaming présentant une série réalisé dans un projet dans le carde du BUT Informatique.</p>
+                <a><img src="./img/github_logo.png"></a>
+                
+            </div>
+        </section>
+
+        <section id="sudoku" class="sudoku-section project">
+            <div class="title-container">
+                <h1 class="project-title">Résolveur de sudoku</h1>
+            </div>
+            <div class="project-container">
+                <p>test</p>
+                
+            </div>
+        </section>
+
+
+
         <section id="contact" class="contact-section">
             <h1 class="section-title">Contact</h1>
             <p>Vous pouvez me contacter par email à l'adresse suivante : 
@@ -82,7 +155,7 @@
     <footer>
         <p>&copy; 2023 Mallet Piel</p>
     </footer>
-    <div class="background" content="anim_bg">
+    <div class="background" content="anim-bg">
         <span></span>
         <span></span>
         <span></span>

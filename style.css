@@ -20,24 +20,36 @@ body {
 }
 
 /* Navbar styles */
-.navbar ul {
+.navbar {
     background-color: rgb(var(--classic));
     color: white;
     padding: 10px;
-    text-align: center;
-    justify-content: flex-end;
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
 }
 
-.navbar li {
+.container-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.items-navbar-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.items-navbar-container a {
     padding: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.navbar li:hover {
+.items-navbar-container a:hover {
     border-radius: 20px;
     background-color: rgba(var(--primary), 0.80);
     transform: scale(1.05);
@@ -47,6 +59,7 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
 
 /* Profile and CV download styles */
 .profile {
@@ -59,7 +72,7 @@ a {
     border-radius: 20px;
 }
 
-.cv_download {
+.cv-download {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -72,7 +85,7 @@ a {
     background-color: rgb(var(--classic));
 }
 
-.cv_download:hover img {
+.cv-download:hover img {
     animation: tingling 0.1s infinite;
 }
 
@@ -115,6 +128,8 @@ a {
     gap: 2vw;
     width: 100%;
     height: 80vh;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .about-text {
@@ -130,7 +145,15 @@ a {
     width: 60%;
 }
 
-/* Projects section */
+.about-wrapper-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 60%;
+
+}
+
+/* Projects cards section */
 
 .projects-section {
     display: flex;
@@ -141,7 +164,7 @@ a {
     width: 100%;
 }
 
-.container_cards {
+.container-cards {
     display: grid;
     min-height: 40vh;
     padding: 4rem 12%;
@@ -169,17 +192,77 @@ a {
     transform: scale(1.05);
 }
 
-.img_container_projects{
+.img-container-projects{
     width: 100%;
     height: 10rem;
     overflow: hidden;
     border-radius: 20px;
 }
 
-.img_projects {
+.img-projects {
     height: 100%;
     object-fit: cover;
 }
+
+/* Separateur cards-projects */
+
+.container-sep-cards-project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.sep-cards-project{
+    width: 60%;
+    height: 10px;
+    background-color: rgb(var(--accent));
+    border-radius: 20px;
+    outline: none;
+}
+
+/* Projects Section */
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 5rem;
+    width: 50%;
+}
+
+.project-title {
+    font-size: 2vw;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 2rem;
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(var(--classic));
+}
+
+.project-container img {
+    padding: 10px 10px 0px 10px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.project-container p{
+    padding: 0px 10px 10px 10px;
+    font-size: 1.5em;
+}
+
+
+
+
 
 /* Button styles */
 .button {
@@ -192,6 +275,41 @@ a {
     background-color: rgba(var(--primary), 0.80);
     transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Animation background */
 

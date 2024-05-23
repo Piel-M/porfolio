@@ -243,16 +243,24 @@ a {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    gap: 2rem;
     padding: 10px;
     width: 100%;
     background-color: rgb(var(--classic));
+    align-items: center;
 }
 
-.project-container img {
-    padding: 10px 10px 0px 10px;
-    width: 100%;
+.project-container .top-text {
+
+    margin-top: 1em;
+}
+
+.project-container .comp-trav {
+    background-color: rgb(var(--accent));
+    display: grid;
+    place-items: center;
+    padding: 5px;
     border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 .project-container p{
@@ -260,7 +268,23 @@ a {
     font-size: 1.5em;
 }
 
+.project-main-img {
+    padding: 10px 10px 0px 10px;
+    width: 100%;
+    border-radius: 20px;
+}
 
+.git-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.github-link img {
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+}
 
 
 

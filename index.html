@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mallet Piel</title>
     <link rel="stylesheet" href="style.css">
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/"></script>
 </head>
+
 <body>
-    
+
     <header>
         <nav class="navbar">
             <div class="container-navbar">
@@ -15,51 +19,50 @@
                     <a href="index.html" class="logo">Mallet Piel</a>
                 </div>
                 <div class="items-navbar-container">
-                    <a href="#about">A propos</a>
-                    <a href="#projects">Projets</a>
+                    <a href="#about">À propos</a>
+                    <a href="#competences">Compétences</a>
                     <a href="#contact">Contact</a>
                 </div>
             </div>
         </nav>
-    </header>    
+    </header>
     <main>
+
         <section id="about" class="about-section">
             <div class="title-container">
-                <h1 class="section-title">A propos</h1>
+                <h1 class="section-title">À propos</h1>
             </div>
             <div class="about-wrapper">
                 <div class="profile">
                     <img src="./img/photo_iut.jpeg" width="800" height="1040" alt="Photo de profil">
-                    <a href="./pdf/CV_PIEL_MALLET.pdf" class="cv-download button" download="CV_MALLET_Piel.pdf" target="_blank">
-                        <span >Mon CV</span>
+                    <a href="./pdf/CV_PIEL_MALLET.pdf" class="cv-download button" download="CV_MALLET_Piel.pdf"
+                        target="_blank">
+                        <span>Mon CV</span>
                         <img src="./img/download.svg" alt="DL">
                     </a>
-                </div>            
-                <section class="about-text">
-                    <p>Je suis étudiant à l'IUT de Lannion en BUT Informatique. Je suis passionné par le développement en général, mais je m'oriente principalement vers le développement logiciel. Mon but serait justement de travailler dans le développement logiciel après avoir fini mon cursus.</p>
+                </div>
+                <section class="about-text text-2xl p-2.5 rounded-2xl">
+                    <p>Je suis étudiant à l'IUT de Lannion en BUT Informatique. Je suis passionné par le développement
+                        en général, mais je m'oriente principalement vers le développement d'applications web. Mon but
+                        serait justement de travailler dans le développement d'applications web après avoir terminé mon
+                        cursus.</p>
                     <br>
-                    <p>Actuellement, je suis à la recherche d'une alternance pour l'année prochaine (septembre 2024), afin de progresser et de découvrir le milieu professionnel vers lequel je m'oriente.</p>
+                    <p>Je suis actuellement 3ème année de BUT Informatique en alternance au sein de la société Mobil-inn
+                        à Lannion, où j’ai l’opportunité de mettre en pratique et de développer mes compétences.</p>
                 </section>
-            </div>
-            <div class="about-wrapper-form">
-                <section class="about-text">
-                    <h2><u>Formation</u> :</h2>
-                    <br>
-                    <p>J'ai suivi un parcours général au lycée Jean Macé à Lanester, où j'ai choisi la spécialité Numérique et Sciences Informatiques (NSI) ainsi que la spécialité Mathématiques.</p>
-                </section>
-            </div>
         </section>
-        <section id="projects" class="projects-section">
+        <section id="competences" class="competences-section">
             <div class="title-container">
-                <h1 class="section-title">Projets</h1>
+                <h1 class="section-title">Compétences</h1>
             </div>
             <div class="container-cards">
 
                 <a href="#sudoku" title="Jeu de Sudoku" class="cards">
                     <div class="project-card">
                         <div class="img-container-projects">
-                            <img src="./img/projects/sudoku/sudoku_generic.jpg" alt="Sudoku main images" class="img-projects">
-                        </div> 
+                            <img src="./img/projects/sudoku/sudoku_generic.jpg" alt="Sudoku main images"
+                                class="img-projects">
+                        </div>
                         <h2 class="h2-cards">Sudoku</h2>
                         <hr>
                         <p>Jeu de Sudoku développé en C</p>
@@ -69,8 +72,9 @@
                 <a href="#sudoku_res" title="Résolveur de sudoku" class="cards">
                     <div class="project-card">
                         <div class="img-container-projects">
-                            <img src="./img/projects/sudoku_res/sudoku_code.png" alt="Code Resolution de Sudoku" class="img-projects">
-                        </div> 
+                            <img src="./img/projects/sudoku_res/sudoku_code.png" alt="Code Resolution de Sudoku"
+                                class="img-projects">
+                        </div>
                         <h2 class="h2-cards">Résolveur de sudoku</h2>
                         <hr>
                         <p>Programme C permettant de résoudre de grandes grilles de sudoku</p>
@@ -80,8 +84,9 @@
                 <a href="#documentation" title="Documentation technique" class="cards">
                     <div class="project-card">
                         <div class="img-container-projects">
-                            <img src="./img/projects/documentation/documentation.png" alt="Documentation main image" class="img-projects">
-                        </div> 
+                            <img src="./img/projects/documentation/documentation.png" alt="Documentation main image"
+                                class="img-projects">
+                        </div>
                         <h2 class="h2-cards">Documentation technique</h2>
                         <hr>
                         <p>Générateur de documentation technique pour des fichiers sources C</p>
@@ -92,7 +97,7 @@
                     <div class="project-card">
                         <div class="img-container-projects">
                             <img src="./img/projects/bdd/class-diagram.png" alt="BDD main images" class="img-projects">
-                        </div> 
+                        </div>
                         <h2 class="h2-cards">Base de données</h2>
                         <hr>
                         <p></p>
@@ -102,8 +107,9 @@
                 <a href="#tabaskho" title="Tabas'kho" class="cards">
                     <div class="project-card">
                         <div class="img-container-projects">
-                            <img src="./img/projects/tabaskho/thabasko1.png" alt="Tabas'kho main images" class="img-projects">
-                        </div> 
+                            <img src="./img/projects/tabaskho/thabasko1.png" alt="Tabas'kho main images"
+                                class="img-projects">
+                        </div>
                         <h2 class="h2-cards">Tabas'kho</h2>
                         <hr>
                         <p>Site web vitrine d'un site de streaming</p>
@@ -113,8 +119,9 @@
                 <a href="#gestion_projet" title="Gestion d'un projet" class="cards">
                     <div class="project-card">
                         <div class="img-container-projects">
-                            <img src="./img/projects/gestion_projet/RACI.png" alt="Gestion d'un projet main images" class="img-projects">
-                        </div> 
+                            <img src="./img/projects/gestion_projet/RACI.png" alt="Gestion d'un projet main images"
+                                class="img-projects">
+                        </div>
                         <h2 class="h2-cards">Gestion d'un projet</h2>
                         <hr>
                         <p>Gestion d'un projet en équipe</p>
@@ -124,143 +131,18 @@
             </div>
         </section>
 
-        <div class="container-sep-cards-project">
-            <hr class="sep-cards-project">
-        </div>
-
-        <section id="sudoku" class="sudoku-section project">
-            <div class="title-container">
-                <h1 class="project-title">SAE 1.01 - Jeu de sudoku</h1>
-            </div>
-            <div class="project-container">
-                <div class="container-project-main-img">
-                    <img class="project-main-img" src="./img/projects/sudoku/sudoku_code.png" alt="Sudoku main">
-                </div>
-                <p class="top-text" >Ce programme est un jeu de sudoku en C</p>
-                <div class="comp-trav">
-                    <p><u>Compétences travaillée :</u></p>
-                </div>
-                <p>01. Développement d'applications</p>
-                <div class="git-container">
-                    <a class="" href="https://github.com/Piel-M/sudoku_in_c"><p>Lien du github : </p></a>
-                    <a class="github-link" href="https://github.com/Piel-M/sudoku_in_c"><img src="./img/github_logo.png"></a>
-                </div>
-                
-            </div>
-        </section>
-
-        <section id="sudoku_res" class="sudoku_res-section project">
-            <div class="title-container">
-                <h1 class="project-title">SAE 1.02 - Résolveur de sudoku</h1>
-            </div>
-            <div class="project-container">
-                <div class="container-project-main-img">
-                    <img class="project-main-img" src="./img/projects/sudoku_res/sudoku_res.png" alt="Résolveur de Sudoku main">
-                </div>
-                <p class="top-text" >Ce programme est un résolveur de sudoku en C permettant de résoudre des grilles de sudoku de n'importe quelle taille</p>
-                <div class="comp-trav">
-                    <p><u>Compétences travaillée :</u></p>
-                </div>
-                <p>02. Optimisation d'applications</p>
-                <div class="git-container">
-                    <a class="" href="https://github.com/Piel-M/sudoku_resolver_in_C"><p>Lien du github : </p></a>
-                    <a class="github-link" href="https://github.com/Piel-M/sudoku_resolver_in_C"><img src="./img/github_logo.png"></a>
-                </div>
-                
-            </div>
-        </section>
-
-        <section id="documentation" class="documentation project">
-            <div class="title-container">
-                <h1 class="project-title">SAÉ 1.03 - Documentation technique automatique</h1>
-            </div>
-            <div class="project-container">
-                <img class="project-main-img" src="./img/projects/documentation/documentation.png" alt="Documentation main">
-                <p class="top-text" >Tabaskho est un site Vitrine pour un site de streaming présentant une série réalisé dans un projet dans le cadre du BUT Informatique, le projet à été réalisé en équipe de 4 avec d'autres élèves de la classe.</p>
-                <div class="comp-trav">
-                    <p><u>Compétences travaillée :</u></p>
-                </div>
-                <p>03. Administrer des systèmes complexes</p>
-                <div class="git-container">
-                    <a class="" href="https://github.com/Piel-M/technical_documentation_for_c_files"><p>Lien du github : </p></a>
-                    <a class="github-link" href="https://github.com/Piel-M/technical_documentation_for_c_files"><img src="./img/github_logo.png"></a>
-                </div>
-                
-            </div>
-        </section>
-
-        <section id="BDD" class="bdd-section project">
-            <div class="title-container">
-                <h1 class="project-title">SAÉ 1.04 - Base de données</h1>
-            </div>
-            <div class="project-container">
-                <img class="project-main-img" src="./img/projects/bdd/class-diagram.png" alt="Documentation main">
-                <p class="top-text" >BDD</p>
-                <div class="comp-trav">
-                    <p><u>Compétences travaillée :</u></p>
-                </div>
-                <p>04. Gérer des données de l'information</p>
-                <div class="git-container">
-                    <a class="" href="https://github.com/Piel-M/technical_documentation_for_c_files"><p>Lien du github : </p></a>
-                    <a class="github-link" href="https://github.com/Piel-M/technical_documentation_for_c_files"><img src="./img/github_logo.png"></a>
-                </div>
-                
-            </div>
-        </section>
-
-        <section id="tabaskho" class="tabaskho-section project">
-            <div class="title-container">
-                <h1 class="project-title">SAE 1.05 - Tabas'kho</h1>
-            </div>
-            <div class="project-container">
-                <img class="project-main-img" src="./img/projects/tabaskho/thabasko1.png" alt="Thabskho main">
-                <p class="top-text" >Tabaskho est un site Vitrine pour un site de streaming présentant une série réalisé dans un projet dans le cadre du BUT Informatique, le projet à été réalisé en équipe de 4 avec d'autres élèves de la classe.</p>
-                <div class="comp-trav">
-                    <p><u>Compétences travaillée :</u></p>
-                </div>
-                <p>5. Conduire un projet</p>
-                <div class="git-container">
-                    <a class="" href="https://github.com/Piel-M/tabaskho"><p>Lien du github : </p></a>
-                    <a class="github-link" href="https://github.com/Piel-M/tabaskho"><img src="./img/github_logo.png"></a>
-                </div>
-                
-            </div>
-        </section>
-
-        <section id="gestion_projet" class="gestion_projet-section project">
-            <div class="title-container">
-                <h1 class="project-title">SAÉ 2.05 - Gestion d'un projet</h1>
-            </div>
-            <div class="project-container">
-                <img class="project-main-img" src="./img/projects/gestion_projet/RACI.png" alt="Gestion d'un projet main">
-                <p class="top-text" >Ce projet consiste à analyser les besoins d'un client en équipe afin d'en extraire les besoins fonctionnels afin de concevoir et de développer une application à la demande d'un client.
-                    <br>Durant l'analyse comme le développement final de l'application nous devons résonner en équipe avec les autres membres du groupe pour avancer dans le projet.
-                </p>
-                <div class="comp-trav">
-                    <p><u>Compétences travaillée :</u></p>
-                </div>
-                <p>06. Travailler et résonner en équipe</p>
-                <div class="git-container">
-                    <a class="" href="https://github.com/Piel-M/"><p>Lien du github : </p></a>
-                    <a class="github-link" href="https://github.com/Piel-M"><img src="./img/github_logo.png"></a>
-                </div>
-                
-            </div>
-        </section>
-
-        
-
-
-
         <section id="contact" class="contact-section">
-            <h1 class="section-title">Contact</h1>
-            <p>Vous pouvez me contacter par email à l'adresse suivante : 
+
+            <div class="title-container">
+                <h1 class="section-title">Contact</h1>
+            </div>
+            <p>Vous pouvez me contacter par email à l'adresse suivante :
                 <a href="mailto:p.piel.mallet@gmail.com">p.piel.mallet@gmail.com</a>
             </p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Mallet Piel</p>
+        <p>&copy; 2025 Mallet Piel</p>
     </footer>
     <div class="background" content="anim-bg">
         <span></span>
@@ -315,4 +197,5 @@
         <span></span>
     </div>
 </body>
+
 </html>

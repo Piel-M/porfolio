@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import "tailwindcss";
 
 :root {
     --text: 240, 255, 244;
@@ -6,7 +7,7 @@
     --primary: 155, 78, 255;
     --secondary: 113, 186, 255;
     --accent: 212, 42, 255;
-    --classic: 52,68,102;
+    --classic: 52, 68, 102;
     --misc-color: #ff00cc;
 }
 
@@ -127,15 +128,11 @@ a {
     align-items: center;
     gap: 2vw;
     width: 100%;
-    height: 80vh;
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
 
 .about-text {
-    font-size: 1.5vw;
-    border-radius: 20px;
-    padding: 10px;
     background-color: rgb(var(--classic));
 }
 
@@ -153,13 +150,9 @@ a {
 
 }
 
-/* Projects cards section */
+/* Competences cards section */
 
-.h2-cards {
-    padding-top: 1rem;
-}
-
-.projects-section {
+.competences-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,61 +163,52 @@ a {
 
 .container-cards {
     display: grid;
-    min-height: 40vh;
-    padding: 4rem 12%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 2rem;
-    row-gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 4rem;
+    padding: 0 5rem 5rem 5rem;
 }
 
 .cards {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
     border-radius: 20px;
     background-color: rgba(var(--classic));
-
-    
+    overflow: hidden;
+    text-align: center;
     transition: transform 0.15s ease-in;
 }
 
-.cards:hover{
+.cards:hover {
     transform: scale(1.05);
 }
 
-.img-container-projects{
+.img-container-projects {
     width: 100%;
     height: 10rem;
     overflow: hidden;
-    border-radius: 20px;
 }
 
 .img-projects {
-    height: 100%;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-/* Separateur cards-projects */
+.project-card > h2,
+.project-card > hr,
+.project-card > p {
+    width: 100%;
+    margin: 0.5rem 0;
+}
 
-.container-sep-cards-project{
+.project-card {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 4rem;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    padding: 1rem;
 }
 
-.sep-cards-project{
-    width: 60%;
-    height: 10px;
-    background-color: rgb(var(--accent));
-    border-radius: 20px;
-    outline: none;
-}
 
 /* Projects Section */
 

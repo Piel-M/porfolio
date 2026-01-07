@@ -1,201 +1,215 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mallet Piel</title>
+    <title>Mallet Piel | Développeur Web & App</title>
+    
+    <!-- Polices modernes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Custom -->
     <link rel="stylesheet" href="style.css">
-    <link href="./output.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com/"></script>
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0f172a',
+                        primary: '#6366f1', // Indigo
+                        secondary: '#ec4899', // Pink
+                        glass: 'rgba(255, 255, 255, 0.05)',
+                        glassBorder: 'rgba(255, 255, 255, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="bg-dark text-white font-sans overflow-x-hidden selection:bg-primary selection:text-white">
 
-    <header>
-        <nav class="navbar">
-            <div class="container-navbar">
-                <div class="logo">
-                    <a href="index.html" class="logo">Mallet Piel</a>
-                </div>
-                <div class="items-navbar-container">
-                    <a href="#about">À propos</a>
-                    <a href="#competences">Compétences</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
+    <!-- Background Animé (Blobs) -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blur-overlay"></div>
+    </div>
 
-        <section id="about" class="about-section">
-            <div class="title-container">
-                <h1 class="section-title">À propos</h1>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center backdrop-blur-md bg-dark/30 border-b border-glassBorder rounded-b-2xl mx-2 mt-2">
+            <a href="#" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                MP.
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="#home" class="nav-link text-gray-300 hover:text-white transition-colors">Accueil</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-white transition-colors">À propos</a>
+                <a href="#skills" class="nav-link text-gray-300 hover:text-white transition-colors">Compétences</a>
+                <a href="#projects" class="nav-link text-gray-300 hover:text-white transition-colors">Projets</a>
+                <a href="#contact" class="px-5 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold shadow-lg hover:shadow-indigo-500/50 transition-all transform hover:-translate-y-1">
+                    Me contacter
+                </a>
             </div>
-            <div class="about-wrapper">
-                <div class="profile">
-                    <img src="./img/photo_iut.jpeg" width="800" height="1040" alt="Photo de profil">
-                    <a href="./pdf/CV_PIEL_MALLET.pdf" class="cv-download button" download="CV_MALLET_Piel.pdf"
-                        target="_blank">
-                        <span>Mon CV</span>
-                        <img src="./img/download.svg" alt="DL">
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-dark/95 backdrop-blur-xl border-b border-glassBorder p-6 flex flex-col gap-4 md:hidden">
+            <a href="#home" class="text-lg">Accueil</a>
+            <a href="#about" class="text-lg">À propos</a>
+            <a href="#skills" class="text-lg">Compétences</a>
+            <a href="#projects" class="text-lg">Projets</a>
+            <a href="#contact" class="text-primary font-bold">Me contacter</a>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+
+        <!-- HERO SECTION -->
+        <section id="home" class="min-h-screen flex items-center justify-center relative px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <span class="text-primary font-semibold tracking-wider uppercase text-sm mb-4 block">Bienvenue sur mon portfolio</span>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Salut, je suis <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary bg-300% animate-gradient">Piel Mallet</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                    Étudiant en BUT Informatique, passionné par la création d'applications web.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#projects" class="px-8 py-3 rounded-full bg-white text-dark font-bold hover:bg-gray-200 transition-all">
+                        Voir mes projets
+                    </a>
+                    <a href="./pdf/CV_PIEL_MALLET.pdf" target="_blank" class="px-8 py-3 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all flex items-center justify-center gap-2 group">
+                        <span>Télécharger CV</span>
+                        <i class="fa-solid fa-download group-hover:animate-bounce"></i>
                     </a>
                 </div>
-                <section class="about-text text-2xl p-2.5 rounded-2xl">
-                    <p>Je suis étudiant à l'IUT de Lannion en BUT Informatique. Je suis passionné par le développement
-                        en général, mais je m'oriente principalement vers le développement d'applications web. Mon but
-                        serait justement de travailler dans le développement d'applications web après avoir terminé mon
-                        cursus.</p>
-                    <br>
-                    <p>Je suis actuellement 3ème année de BUT Informatique en alternance au sein de la société Mobil-inn
-                        à Lannion, où j’ai l’opportunité de mettre en pratique et de développer mes compétences.</p>
-                </section>
-        </section>
-        <section id="competences" class="competences-section">
-            <div class="title-container">
-                <h1 class="section-title">Compétences</h1>
             </div>
-            <div class="container-cards">
+            
+            <!-- Scroll Indicator -->
+            <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-500">
+                <i class="fa-solid fa-arrow-down text-xl"></i>
+            </a>
+        </section>
 
-                <a href="#sudoku" title="Jeu de Sudoku" class="cards">
-                    <div class="project-card">
-                        <div class="img-container-projects">
-                            <img src="./img/projects/sudoku/sudoku_generic.jpg" alt="Sudoku main images"
-                                class="img-projects">
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Image Wrapper with Glow -->
+                    <div class="relative group reveal-left">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-square bg-dark">
+                            <!-- Placeholder si l'image n'existe pas, remplace par ton chemin -->
+                            <img src="./img/photo_iut.jpeg" alt="Piel Mallet" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
-                        <h2 class="h2-cards">Sudoku</h2>
-                        <hr>
-                        <p>Jeu de Sudoku développé en C</p>
                     </div>
-                </a>
 
-                <a href="#sudoku_res" title="Résolveur de sudoku" class="cards">
-                    <div class="project-card">
-                        <div class="img-container-projects">
-                            <img src="./img/projects/sudoku_res/sudoku_code.png" alt="Code Resolution de Sudoku"
-                                class="img-projects">
+                    <!-- Content -->
+                    <div class="reveal-right">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 flex items-center gap-3">
+                            <span class="text-secondary">01.</span> À Propos
+                        </h2>
+                        <div class="space-y-4 text-gray-300 text-lg leading-relaxed bg-glass p-6 rounded-2xl border border-glassBorder backdrop-blur-sm">
+                            <p>
+                                Je suis actuellement étudiant en <strong class="text-white">3ème année de BUT Informatique</strong> à l'IUT de Lannion. 
+                            </p>
+                            <p>
+                                Mon parcours est rythmé par l'alternance au sein de la société <strong class="text-primary">Mobil-inn</strong>, 
+                                où je transforme la théorie en solutions concrètes.
+                            </p>
+                            <p>
+                                Bien que je touche au développement général, mon cœur balance pour le <strong class="text-secondary">Web & Mobile</strong>. 
+                                J'aime construire des interfaces intuitives et résoudre des problèmes complexes avec du code propre.
+                            </p>
                         </div>
-                        <h2 class="h2-cards">Résolveur de sudoku</h2>
-                        <hr>
-                        <p>Programme C permettant de résoudre de grandes grilles de sudoku</p>
-                    </div>
-                </a>
-
-                <a href="#documentation" title="Documentation technique" class="cards">
-                    <div class="project-card">
-                        <div class="img-container-projects">
-                            <img src="./img/projects/documentation/documentation.png" alt="Documentation main image"
-                                class="img-projects">
+                        
+                        <!-- Stats rapide -->
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                                <h3 class="text-primary font-bold text-xl">Alternance</h3>
+                                <p class="text-sm text-gray-400">Chez Mobil-inn</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                                <h3 class="text-secondary font-bold text-xl">Objectif</h3>
+                                <p class="text-sm text-gray-400">Développeur Fullstack</p>
+                            </div>
                         </div>
-                        <h2 class="h2-cards">Documentation technique</h2>
-                        <hr>
-                        <p>Générateur de documentation technique pour des fichiers sources C</p>
                     </div>
-                </a>
-
-                <a href="#BDD" title="Base de donnée" class="cards">
-                    <div class="project-card">
-                        <div class="img-container-projects">
-                            <img src="./img/projects/bdd/class-diagram.png" alt="BDD main images" class="img-projects">
-                        </div>
-                        <h2 class="h2-cards">Base de données</h2>
-                        <hr>
-                        <p></p>
-                    </div>
-                </a>
-
-                <a href="#tabaskho" title="Tabas'kho" class="cards">
-                    <div class="project-card">
-                        <div class="img-container-projects">
-                            <img src="./img/projects/tabaskho/thabasko1.png" alt="Tabas'kho main images"
-                                class="img-projects">
-                        </div>
-                        <h2 class="h2-cards">Tabas'kho</h2>
-                        <hr>
-                        <p>Site web vitrine d'un site de streaming</p>
-                    </div>
-                </a>
-
-                <a href="#gestion_projet" title="Gestion d'un projet" class="cards">
-                    <div class="project-card">
-                        <div class="img-container-projects">
-                            <img src="./img/projects/gestion_projet/RACI.png" alt="Gestion d'un projet main images"
-                                class="img-projects">
-                        </div>
-                        <h2 class="h2-cards">Gestion d'un projet</h2>
-                        <hr>
-                        <p>Gestion d'un projet en équipe</p>
-                    </div>
-                </a>
-
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-
-            <div class="title-container">
-                <h1 class="section-title">Contact</h1>
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="py-20 px-6 bg-black/20">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center reveal">
+                    <span class="text-secondary">02.</span> Compétences Techniques
+                </h2>
+                
+                <div id="skills-container" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 reveal">
+                    <!-- Chargé dynamiquement depuis data/skills.json -->
+                </div>
             </div>
-            <p>Vous pouvez me contacter par email à l'adresse suivante :
-                <a href="mailto:p.piel.mallet@gmail.com">p.piel.mallet@gmail.com</a>
-            </p>
         </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="py-20 px-6">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 flex items-center gap-3 reveal">
+                    <span class="text-secondary">03.</span> Projets Récents
+                </h2>
+
+                <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Chargé dynamiquement depuis data/projects.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <span class="text-primary font-bold uppercase tracking-widest text-sm">Prochaine étape ?</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-8">Travaillons ensemble</h2>
+                <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
+                    Je suis toujours ouvert aux nouvelles opportunités et aux projets intéressants. Que vous ayez une question ou juste pour dire bonjour, ma boîte mail est ouverte !
+                </p>
+                
+                <a href="mailto:p.piel.mallet@gmail.com" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold text-lg hover:shadow-lg hover:shadow-purple-500/30 transform hover:-translate-y-1 transition-all">
+                    <i class="fa-regular fa-envelope"></i>
+                    p.piel.mallet@gmail.com
+                </a>
+            </div>
+        </section>
+
     </main>
-    <footer>
-        <p>&copy; 2025 Mallet Piel</p>
-    </footer>
-    <div class="background" content="anim-bg">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</body>
 
+    <footer class="border-t border-glassBorder bg-dark/50 backdrop-blur-sm py-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 Mallet Piel. Conçu avec <span class="text-secondary">Tailwind CSS</span>.</p>
+    </footer>
+
+    <script src="data/projects.js"></script>
+    <script src="data/skills.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>

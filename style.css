@@ -4,23 +4,37 @@
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: #0f172a;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #334155;
     border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #6366f1;
 }
 
 /* Background Blobs Animation */
 @keyframes blob-bounce {
-    0% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(30px, -50px) scale(1.1); }
-    66% { transform: translate(-20px, 20px) scale(0.9); }
-    100% { transform: translate(0, 0) scale(1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
 }
 
 .blob {
@@ -36,7 +50,8 @@
     left: -10%;
     width: 500px;
     height: 500px;
-    background: #6366f1; /* Primary */
+    background: #6366f1;
+    /* Primary */
     animation-delay: 0s;
 }
 
@@ -45,7 +60,8 @@
     right: -10%;
     width: 600px;
     height: 600px;
-    background: #ec4899; /* Secondary */
+    background: #ec4899;
+    /* Secondary */
     animation-delay: 2s;
 }
 
@@ -54,7 +70,8 @@
     left: 40%;
     width: 400px;
     height: 400px;
-    background: #8b5cf6; /* Violet */
+    background: #8b5cf6;
+    /* Violet */
     animation-delay: 4s;
     opacity: 0.2;
 }
@@ -62,7 +79,8 @@
 .blur-overlay {
     position: absolute;
     inset: 0;
-    backdrop-filter: blur(100px); /* Lisse les blobs */
+    backdrop-filter: blur(100px);
+    /* Lisse les blobs */
     z-index: -1;
 }
 
@@ -72,9 +90,17 @@
 }
 
 @keyframes gradient-move {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .animate-gradient {
@@ -92,7 +118,8 @@
 
 .project-card:hover {
     background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(99, 102, 241, 0.3); /* Primary border on hover */
+    border-color: rgba(99, 102, 241, 0.3);
+    /* Primary border on hover */
     transform: translateY(-10px);
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
@@ -116,25 +143,89 @@
 }
 
 /* Scroll Reveal Classes */
-.reveal, .reveal-left, .reveal-right {
+.reveal,
+.reveal-left,
+.reveal-right {
     opacity: 0;
     transition: all 1s ease-out;
 }
 
-.reveal { transform: translateY(30px); }
-.reveal-left { transform: translateX(-50px); }
-.reveal-right { transform: translateX(50px); }
+.reveal {
+    transform: translateY(30px);
+}
 
-.reveal.active { transform: translateY(0); opacity: 1; }
-.reveal-left.active { transform: translateX(0); opacity: 1; }
-.reveal-right.active { transform: translateX(0); opacity: 1; }
+.reveal-left {
+    transform: translateX(-50px);
+}
+
+.reveal-right {
+    transform: translateX(50px);
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.reveal-left.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.reveal-right.active {
+    transform: translateX(0);
+    opacity: 1;
+}
 
 /* Animation delays */
-.delay-100 { transition-delay: 100ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-300 { transition-delay: 300ms; }
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
 
 /* Utilities */
 .bg-glass {
     background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* 2 éléments (centrés en 3–4) */
+#skills-container:has(> :nth-child(2)):not(:has(> :nth-child(3)))> :first-child {
+    grid-column: 3;
+}
+
+#skills-container:has(> :nth-child(2)):not(:has(> :nth-child(3)))> :last-child {
+    grid-column: 4;
+}
+
+/* 4 éléments (centrés en 2–5, pas aux extrémités) */
+#skills-container:has(> :nth-child(4)):not(:has(> :nth-child(5)))> :nth-child(1) {
+    grid-column: 2;
+}
+
+#skills-container:has(> :nth-child(4)):not(:has(> :nth-child(5)))> :nth-child(2) {
+    grid-column: 3;
+}
+
+#skills-container:has(> :nth-child(4)):not(:has(> :nth-child(5)))> :nth-child(3) {
+    grid-column: 4;
+}
+
+#skills-container:has(> :nth-child(4)):not(:has(> :nth-child(5)))> :nth-child(4) {
+    grid-column: 5;
+}
+
+/* 8 éléments → les 2 derniers en 3–4 */
+#skills-container> :nth-last-child(2) {
+    grid-column: 3;
+}
+
+#skills-container> :last-child {
+    grid-column: 4;
 }

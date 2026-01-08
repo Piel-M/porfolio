@@ -15,14 +15,24 @@ const SKILLS_DATA = [
         color: "text-yellow-400"
     },
     {
+        name: "TypeScript",
+        icon: "/img/icons/typescript.png",
+        color: "text-blue-600"
+    },
+    {
         name: "Langage C",
         icon: "fa-solid fa-c",
         color: "text-blue-300"
     },
     {
-        name: "PHP / SQL",
+        name: "PHP",
         icon: "fa-brands fa-php",
         color: "text-indigo-400"
+    },
+    {
+        name: "SQL",
+        icon: "fa-solid fa-database",
+        color: "text-blue-700"
     },
     {
         name: "Git",

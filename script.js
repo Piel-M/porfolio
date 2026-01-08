@@ -117,9 +117,15 @@ function loadSkills() {
 }
 
 function createSkillCard(skill) {
+    const isImage = skill.icon.startsWith('http') || skill.icon.startsWith('/') || skill.icon.endsWith('.svg') || skill.icon.endsWith('.png') || skill.icon.endsWith('.jpg');
+    
+    const iconHtml = isImage
+        ? `<img src="${skill.icon}" alt="${skill.name}" class="w-10 h-10 mb-2">`
+        : `<i class="${skill.icon} text-5xl ${skill.color} mb-2"></i>`;
+
     return `
         <div class="skill-card">
-            <i class="${skill.icon} text-4xl ${skill.color} mb-2"></i>
+            ${iconHtml}
             <span>${skill.name}</span>
         </div>
     `;

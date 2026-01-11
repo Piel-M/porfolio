@@ -128,13 +128,22 @@
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 1rem;
+    min-height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
     cursor: default;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .skill-card {
+        padding: 1.5rem;
+        min-height: 120px;
+    }
 }
 
 .skill-card:hover {
@@ -193,39 +202,4 @@
 /* Utilities */
 .bg-glass {
     background-color: rgba(255, 255, 255, 0.03);
-}
-
-/* 2 éléments (centrés en 3–4) */
-#skills-container:has(> :nth-child(2)):not(:has(> :nth-child(3)))> :first-child {
-    grid-column: 3;
-}
-
-#skills-container:has(> :nth-child(2)):not(:has(> :nth-child(3)))> :last-child {
-    grid-column: 4;
-}
-
-/* 4 éléments (centrés en 2–5, pas aux extrémités) */
-#skills-container:has(> :nth-child(4)):not(:has(> :nth-child(5)))> :nth-child(1) {
-    grid-column: 2;
-}
-
-#skills-container:has(> :nth-child(4)):not(:has(> :nth-child(5)))> :nth-child(2) {
-    grid-column: 3;
-}
-
-#skills-container:has(> :nth-child(4)):not(:has(> :nth-child(5)))> :nth-child(3) {
-    grid-column: 4;
-}
-
-#skills-container:has(> :nth-child(4)):not(:has(> :nth-child(5)))> :nth-child(4) {
-    grid-column: 5;
-}
-
-/* 8 éléments → les 2 derniers en 3–4 */
-#skills-container> :nth-last-child(2) {
-    grid-column: 3;
-}
-
-#skills-container> :last-child {
-    grid-column: 4;
 }

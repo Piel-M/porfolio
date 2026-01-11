@@ -1,11 +1,23 @@
 const PROJECTS_DATA = [
     {
+        id: "playwright-tests",
+        title: "Tests E2E Automatisés",
+        description: "Framework de tests end-to-end développé en alternance avec Playwright. Simulation des parcours utilisateur pour valider les fonctionnalités avant mise en production. Participation aux weeklys et collaboration avec l'équipe de développement.",
+        image: "./img/projects/playwright_tests/playwright.webp",
+        icon: "fa-solid fa-vial-circle-check",
+        tags: ["Python", "Playwright", "QA"],
+        competences: ["Réaliser", "Optimiser", "Conduire", "Collaborer"],
+        github: null,
+        delay: 0
+    },
+    {
         id: "sudoku",
         title: "Jeu de Sudoku",
         description: "Implémentation complète d'un jeu de Sudoku en langage C, avec gestion de l'interface et des règles.",
         image: "./img/projects/sudoku/sudoku_generic.jpg",
         icon: "fa-solid fa-puzzle-piece",
         tags: ["C", "Algorithmique"],
+        competences: ["Réaliser"],
         github: "https://github.com/Piel-M/sudoku_in_c",
         delay: 0
     },
@@ -16,6 +28,7 @@ const PROJECTS_DATA = [
         image: "./img/projects/sudoku_res/sudoku_code.png",
         icon: "fa-solid fa-robot",
         tags: ["C", "Backtracking"],
+        competences: ["Réaliser", "Optimiser"],
         github: "https://github.com/Piel-M/sudoku_resolver_in_C",
         delay: 100
     },
@@ -26,6 +39,7 @@ const PROJECTS_DATA = [
         image: "./img/projects/tabaskho/thabasko1.png",
         icon: "fa-solid fa-globe",
         tags: ["HTML/CSS", "Design"],
+        competences: ["Réaliser", "Collaborer"],
         github: "https://github.com/Piel-M/tabaskho",
         delay: 200
     },
@@ -36,6 +50,7 @@ const PROJECTS_DATA = [
         image: "./img/projects/documentation/documentation.png",
         icon: "fa-solid fa-file-code",
         tags: ["Java/C", "Regex"],
+        competences: ["Réaliser", "Gérer"],
         github: "https://github.com/Piel-M/technical_documentation_for_c_files",
         delay: 0
     },
@@ -46,6 +61,7 @@ const PROJECTS_DATA = [
         image: "./img/projects/bdd/class-diagram.png",
         icon: "fa-solid fa-database",
         tags: ["SQL", "UML"],
+        competences: ["Réaliser", "Administrer", "Gérer"],
         github: null,
         delay: 100
     },
@@ -56,7 +72,8 @@ const PROJECTS_DATA = [
         image: "./img/projects/gestion_projet/RACI.png",
         icon: "fa-solid fa-users-gear",
         tags: ["Agile", "Management"],
+        competences: ["Gérer", "Conduire", "Collaborer"],
         github: null,
         delay: 200
-    }
+    },
 ];

@@ -67,8 +67,15 @@ function loadProjects() {
 
 function createProjectCard(project) {
     const delayClass = project.delay ? `delay-${project.delay}` : '';
+    
+    // Tags techniques
     const tags = project.tags.map(tag => 
         `<span class="px-2 py-1 rounded bg-white/5 border border-white/10">${tag}</span>`
+    ).join('');
+    
+    // Compétences BUT3 avec style distinct
+    const competences = (project.competences || []).map(comp => 
+        `<span class="px-2 py-1 rounded bg-primary/20 border border-primary/40 text-primary">${comp}</span>`
     ).join('');
 
     const githubLink = project.github 
@@ -92,6 +99,9 @@ function createProjectCard(project) {
                     </div>
                 </div>
                 <p class="text-gray-400 text-sm mb-4 line-clamp-3">${project.description}</p>
+                <div class="flex flex-wrap gap-2 text-xs font-mono mb-3">
+                    ${competences}
+                </div>
                 <div class="flex flex-wrap gap-2 text-xs font-mono text-secondary">
                     ${tags}
                 </div>
@@ -120,13 +130,13 @@ function createSkillCard(skill) {
     const isImage = skill.icon.startsWith('http') || skill.icon.startsWith('/') || skill.icon.endsWith('.svg') || skill.icon.endsWith('.png') || skill.icon.endsWith('.jpg');
     
     const iconHtml = isImage
-        ? `<img src="${skill.icon}" alt="${skill.name}" class="w-10 h-10 mb-2">`
-        : `<i class="${skill.icon} text-5xl ${skill.color} mb-2"></i>`;
+        ? `<img src="${skill.icon}" alt="${skill.name}" class="w-10 h-10 md:w-12 md:h-12 mb-2 object-contain">`
+        : `<i class="${skill.icon} text-4xl md:text-5xl ${skill.color} mb-2"></i>`;
 
     return `
         <div class="skill-card">
             ${iconHtml}
-            <span>${skill.name}</span>
+            <span class="text-sm md:text-base text-center truncate w-full px-1">${skill.name}</span>
         </div>
     `;
 }

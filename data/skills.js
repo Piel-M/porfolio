@@ -5,7 +5,7 @@ const SKILLS_DATA = [
         color: "text-orange-500"
     },
     {
-        name: "CSS/Tailwind",
+        name: "CSS",
         icon: "fa-brands fa-css3-alt",
         color: "text-blue-500"
     },
@@ -38,5 +38,10 @@ const SKILLS_DATA = [
         name: "Git",
         icon: "fa-brands fa-git-alt",
         color: "text-red-500"
+    },
+    {
+        name: "Python",
+        icon: "fa-brands fa-python",
+        color: "text-yellow-500"
     }
 ];

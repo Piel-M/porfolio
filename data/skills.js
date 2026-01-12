@@ -20,11 +20,6 @@ const SKILLS_DATA = [
         color: "text-blue-600"
     },
     {
-        name: "Langage C",
-        icon: "fa-solid fa-c",
-        color: "text-blue-300"
-    },
-    {
         name: "PHP",
         icon: "fa-brands fa-php",
         color: "text-indigo-400"
@@ -35,6 +30,11 @@ const SKILLS_DATA = [
         color: "text-blue-700"
     },
     {
+        name: "Angular",
+        icon: "fa-brands fa-angular",
+        color: "text-red-600"
+    },
+    {
         name: "Git",
         icon: "fa-brands fa-git-alt",
         color: "text-red-500"
@@ -43,5 +43,15 @@ const SKILLS_DATA = [
         name: "Python",
         icon: "fa-brands fa-python",
         color: "text-yellow-500"
+    },
+    {
+        name: "Langage C",
+        icon: "fa-solid fa-c",
+        color: "text-blue-300"
+    },
+    {
+        name: "Java",
+        icon: "fa-brands fa-java",
+        color: "text-orange-600"
     }
 ];

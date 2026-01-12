@@ -2,10 +2,21 @@ const PROJECTS_DATA = [
     {
         id: "playwright-tests",
         title: "Tests E2E Automatisés",
-        description: "Framework de tests end-to-end développé en alternance avec Playwright. Simulation des parcours utilisateur pour valider les fonctionnalités avant mise en production. Participation aux weeklys et collaboration avec l'équipe de développement.",
+        description: "Développement de tests end-to-end en alternance avec Playwright. Tests des parcours utilisateur avant mise en production.",
         image: "./img/projects/playwright_tests/playwright.webp",
         icon: "fa-solid fa-vial-circle-check",
         tags: ["Python", "Playwright", "QA"],
+        competences: ["Réaliser", "Optimiser", "Conduire", "Collaborer"],
+        github: null,
+        delay: 0
+    },
+    {
+        id: "equasens",
+        title: "Modernisation d'une Application Legacy",
+        description: "Développement d'une SPA Angular, migration PHP 7 vers PHP 8.1 et refonte en architecture Symfony.",
+        image: "./img/projects/equasens/EQUASENS_logo_white_bg.png",
+        icon: "fa-solid fa-code-branch",
+        tags: ["Angular", "Symfony", "PHP"],
         competences: ["Réaliser", "Optimiser", "Conduire", "Collaborer"],
         github: null,
         delay: 0
@@ -57,7 +68,7 @@ const PROJECTS_DATA = [
     {
         id: "bdd",
         title: "Architecture BDD",
-        description: "Conception et implémentation d'une base de données complexe, modélisation UML et requêtes SQL optimisées.",
+        description: "Conception et implémentation d'une base de données, modélisation UML et requêtes SQL optimisées.",
         image: "./img/projects/bdd/class-diagram.png",
         icon: "fa-solid fa-database",
         tags: ["SQL", "UML"],

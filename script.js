@@ -87,7 +87,7 @@ function createProjectCard(project) {
     return `
         <article class="project-card group reveal ${delayClass}">
             <div class="relative h-48 overflow-hidden">
-                <div class="absolute inset-0 bg-dark/50 group-hover:bg-transparent transition-all z-10"></div>
+                <div class="absolute inset-0 bg-dark/30 group-hover:bg-transparent transition-all z-10"></div>
                 <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
             </div>
             <div class="p-6">
